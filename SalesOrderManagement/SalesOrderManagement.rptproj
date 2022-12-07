@@ -74,6 +74,11 @@
     <Report Include="MaterialQueue015.rdl" />
     <Report Include="MaterialQueue016.rdl" />
     <Report Include="MaterialQueue017.rdl" />
+    <Report Include="MaterialQueue019.rdl" />
+    <Report Include="MaterialQueue020.rdl" />
+    <Report Include="MaterialQueue021SNI.rdl" />
+    <Report Include="MaterialQueue021SNI09xx.rdl" />
+    <Report Include="MaterialQueue021SNI0xxx.rdl" />
     <Report Include="MaterialQueueTEST.rdl" />
     <Report Include="NonAllocMtlQ001.rdl" />
     <Report Include="NonAllocMtlQ002.rdl" />
