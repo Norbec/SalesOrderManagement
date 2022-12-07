@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <FullPath>Debug</FullPath>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>False</OverwriteDataSources>
+    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>EpicorERP10/Reports/CustomReports/OrderManagement</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>EpicorERP10/Reports</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+    <TargetServerURL>http://sql02-dev/reportserver</TargetServerURL>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
+    <FullPath>DebugLocal</FullPath>
+    <OutputPath>bin\DebugLocal</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>False</OverwriteDataSources>
+    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>SalesOrderManagement</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <FullPath>Release</FullPath>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>False</OverwriteDataSources>
+    <TargetServerVersion>SSRS2008R2</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>EpicorERP10/reports/CustomReports/OrderManagement</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>EpicorERP10/reports</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+    <TargetServerURL>http://sql02-test/reportserver</TargetServerURL>
+  </PropertyGroup>
+  <PropertyGroup>
+    <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD50cnVlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+U0FLPC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+U0FLPC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPlNBSzwvTG9jYWxQYXRoPg0KICA8UHJvdmlkZXI+U0FLPC9Qcm92aWRlcj4NCjwvU291cmNlQ29udHJvbEluZm8+</State>
+    <DataSources>@(DataSource)</DataSources>
+    <DataSets>@(DataSet)</DataSets>
+    <Reports>@(Report)</Reports>
+  </PropertyGroup>
+  <ItemGroup>
+    <Report Include="BTMtlQ001.rdl" />
+    <Report Include="BTMtlQ001Bin03.rdl" />
+    <Report Include="BTMtlQ002.rdl" />
+    <Report Include="BTMtlQ003.rdl" />
+    <Report Include="BTMtlQ004.rdl" />
+    <Report Include="BTNonAllocQ001.rdl" />
+    <Report Include="BTNonAllocQ002.rdl" />
+    <Report Include="BTNonAllocQ003.rdl" />
+    <Report Include="BTOException.rdl" />
+    <Report Include="MaterialQueue001.rdl" />
+    <Report Include="MaterialQueue002.rdl" />
+    <Report Include="MaterialQueue003.rdl" />
+    <Report Include="MaterialQueue004.rdl" />
+    <Report Include="MaterialQueue005.rdl" />
+    <Report Include="MaterialQueue006.rdl" />
+    <Report Include="MaterialQueue007.rdl" />
+    <Report Include="MaterialQueue008.rdl" />
+    <Report Include="MaterialQueue009.rdl" />
+    <Report Include="MaterialQueue00SO.rdl" />
+    <Report Include="MaterialQueue010.rdl" />
+    <Report Include="MaterialQueue011.rdl" />
+    <Report Include="MaterialQueue013.rdl" />
+    <Report Include="MaterialQueue014.rdl" />
+    <Report Include="MaterialQueue015.rdl" />
+    <Report Include="MaterialQueue016.rdl" />
+    <Report Include="MaterialQueue017.rdl" />
+    <Report Include="MaterialQueueTEST.rdl" />
+    <Report Include="NonAllocMtlQ001.rdl" />
+    <Report Include="NonAllocMtlQ002.rdl" />
+    <Report Include="NonAllocMtlQ003.rdl" />
+    <Report Include="NonAllocMtlQ004.rdl" />
+    <Report Include="OpenPackDashboard.rdl" />
+    <Report Include="OpenPackDashboard001.rdl" />
+    <Report Include="OpenPackDashboardSales.rdl" />
+    <Report Include="OpenPackDashboardSales2.rdl" />
+    <Report Include="OpenPickingDashboard.rdl" />
+    <Report Include="ReventeMtlQ001.rdl" />
+    <Report Include="ReventeMtlQ002.rdl" />
+    <Report Include="ReventeMtlQ003.rdl" />
+    <Report Include="RMAForm001.rdl" />
+    <Report Include="SOFormDT001.rdl" />
+    <Report Include="SOFormDT002.rdl" />
+    <Report Include="SOFormDT003.rdl" />
+    <Report Include="SOFormDT004.rdl" />
+    <Report Include="SOFormDT005.rdl" />
+    <Report Include="SOFormDT006.rdl" />
+    <Report Include="SOFormDT007.rdl" />
+    <Report Include="SOFormDT008.rdl" />
+    <Report Include="SOFormDT009.rdl" />
+    <Report Include="SOFormGT001.rdl" />
+    <Report Include="SOFormGT002.rdl" />
+    <Report Include="SOFormGT003.rdl" />
+    <Report Include="SOFormGT004.rdl" />
+    <Report Include="SOFormGT005.rdl" />
+    <Report Include="SOFormGT006.rdl" />
+    <Report Include="SOFormGT007.rdl" />
+    <Report Include="SOFormGT007NOPRIX.rdl" />
+    <Report Include="SOFormGT008.rdl" />
+    <Report Include="SOFormGT009.rdl" />
+    <Report Include="SOFormST001.rdl" />
+    <Report Include="SOFormST002.rdl" />
+    <Report Include="SOFormST003.rdl" />
+    <Report Include="SOFormST004.rdl" />
+    <Report Include="SOFormST005.rdl" />
+    <Report Include="SOFormST006.rdl" />
+    <Report Include="SOFormST007.rdl" />
+    <Report Include="SOFormST008.rdl" />
+    <Report Include="SOFormST009.rdl" />
+    <Report Include="SOForm_KitComponents.rdl" />
+    <Report Include="SOForm_OLMscCharge.rdl" />
+    <Report Include="SOForm_OrderMscCharge.rdl" />
+    <Report Include="SOForm_subreport.rdl" />
+    <Report Include="SrlNums.rdl" />
+    <Report Include="TOMtlNonAllocQ001.rdl" />
+    <Report Include="TOMtlNonAllocQ002.rdl" />
+    <Report Include="TOMtlQ001.rdl" />
+    <Report Include="TOMtlQ002.rdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
+</Project>

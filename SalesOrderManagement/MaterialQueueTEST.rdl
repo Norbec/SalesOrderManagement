@@ -1,0 +1,1664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <Height>6.88542in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>7.75in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.71542in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Rectangle Name="Rectangle1">
+          <ReportItems>
+            <Textbox Name="lblPlant">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!RptLiteralsPlant.Value, "RptLabels")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.125in</Top>
+              <Left>0.08285in</Left>
+              <Height>0.19in</Height>
+              <Width>0.61458in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="lblRptTitle">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value xml:space="preserve">    </Value>
+                      <Style>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=First(Fields!RptLiteralsTitle01.Value, "RptLabels")</Value>
+                      <Style>
+                        <FontSize>16pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.125in</Top>
+              <Left>1.93181in</Left>
+              <Height>0.37556in</Height>
+              <Width>3.95833in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+                <BackgroundColor>Silver</BackgroundColor>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="lblDate">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!RptLiteralsDate.Value, "RptLabels")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>:</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.065in</Top>
+              <Left>5.99778in</Left>
+              <Height>0.19in</Height>
+              <Width>0.73958in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtDate">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=FormatDateTime(Globals!ExecutionTime, DateFormat.ShortDate)</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.065in</Top>
+              <Left>6.79291in</Left>
+              <Height>0.19in</Height>
+              <Width>0.87in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Plant">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!Plant.Value, "MtlQueue")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Plant</rd:DefaultName>
+              <Top>0.125in</Top>
+              <Left>0.71132in</Left>
+              <Height>0.19in</Height>
+              <Width>1in</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtSubTitle">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=IIf(Parameters!Pm_PageBreak.Value &lt;&gt; "" and (InStr(Parameters!Pm_SortBy.Value,"Order") = 1 or
+		InStr(Parameters!Pm_SortBy.Value,"Job") = 1),		
+		IIf(First(Fields!Calc_SelectedByEmployeeName.Value, "MtlQueue") like "",
+			" ( " &amp; First(Fields!RptLiteralsSortBy.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_SortBy.Value &amp; " / " &amp;
+			First(Fields!RptLiteralsPageBreak.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_PageBreak.Value &amp; " )",
+			" ( " &amp; First(Fields!RptLiteralsSelectedByEmpID.Value, "RptLabels") &amp; ": " &amp; First(Fields!Calc_SelectedByEmployeeName.Value, "MtlQueue") &amp; " / " &amp;
+			First(Fields!RptLiteralsSortBy.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_SortBy.Value &amp; " / " &amp;
+			First(Fields!RptLiteralsPageBreak.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_PageBreak.Value &amp; " )"),
+		IIf(First(Fields!Calc_SelectedByEmployeeName.Value, "MtlQueue") like "",
+		" ( " &amp; First(Fields!RptLiteralsSortBy.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_SortBy.Value &amp; " )",
+" ( " &amp; First(Fields!RptLiteralsSelectedByEmpID.Value, "RptLabels") &amp; ": " &amp; First(Fields!Calc_SelectedByEmployeeName.Value, "MtlQueue") &amp; " / " &amp;
+First(Fields!RptLiteralsSortBy.Value, "RptLabels") &amp; ": " &amp; Parameters!Pm_SortBy.Value &amp; " )" ))</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.54223in</Top>
+              <Left>1.47348in</Left>
+              <Height>0.22875in</Height>
+              <Width>5.06076in</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtTime">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Format(Globals!ExecutionTime, "T")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.31056in</Top>
+              <Left>6.79291in</Left>
+              <Height>0.19in</Height>
+              <Width>0.87in</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="lblTime">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!RptLiteralsTime.Value, "RptLabels")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>:</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.31056in</Top>
+              <Left>6.00819in</Left>
+              <Height>0.17612in</Height>
+              <Width>0.73958in</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="txtSubTitle2">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=IIf(First(Fields!Calc_AllocTicketPrinted.Value, "MtlQueue"),
+First(Fields!RptLiteralsReprint.Value, "RptLabels"),
+First(Fields!RptLiteralsOriginalPrint.Value, "RptLabels"))</Value>
+                      <Style>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.79876in</Top>
+              <Left>1.47348in</Left>
+              <Height>0.25346in</Height>
+              <Width>5.06076in</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Height>1.10431in</Height>
+          <Width>7.69416in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BottomBorder>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </BottomBorder>
+          </Style>
+        </Rectangle>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.30208in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Rectangle Name="Rectangle37">
+          <ReportItems>
+            <Textbox Name="txtPageNumber">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!PageNumber</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Left>6.38736in</Left>
+              <Height>0.19097in</Height>
+              <Width>1in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Top>0.06944in</Top>
+          <Left>0.13493in</Left>
+          <Height>0.19097in</Height>
+          <Width>7.38736in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Rectangle>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.16in</TopMargin>
+    <BottomMargin>0.16in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsMaterialQueue">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=sql02-norbec;Initial Catalog=EpicorERPRpt</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>f788712a-11f2-4d40-a290-48295971654a</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="RptLabels">
+      <Query>
+        <DataSourceName>dsMaterialQueue</DataSourceName>
+        <CommandText>="SELECT T1.LotNum,T1.RptLiteralsCalcCustName,T1.RptLiteralsCalcShipToName,T1.RptLiteralsFrom,T1.RptLiteralsFromBin,T1.RptLiteralsFromWhse,T1.RptLiteralsFromWhseBin,T1.RptLiteralsJobAsm,T1.RptLiteralsJobAsmSeq,T1.RptLiteralsJobAsmSeqM,T1.RptLiteralsJobAsmTSeq,T1.RptLiteralsJobNum,T1.RptLiteralsLine,T1.RptLiteralsMtlType,T1.RptLiteralsOrder,T1.RptLiteralsOrderLine,T1.RptLiteralsOrderLnRel,T1.RptLiteralsOrderRel,T1.RptLiteralsOriginalPrint,T1.RptLiteralsPageBreak,T1.RptLiteralsPartDescription,T1.RptLiteralsPartNumber,T1.RptLiteralsPlant,T1.RptLiteralsPOLnRel,T1.RptLiteralsQty,T1.RptLiteralsQueueID,T1.RptLiteralsQueueRef,T1.RptLiteralsReference,T1.RptLiteralsReprint,T1.RptLiteralsReqBy,T1.RptLiteralsRev,T1.RptLiteralsSelectedByEmpID,T1.RptLiteralsSerialNo,T1.RptLiteralsSortBy,T1.RptLiteralsTargetJobAsmSeq,T1.RptLiteralsTitle01,T1.RptLiteralsTitle02,T1.RptLiteralsToBin,T1.RptLiteralsToWhse,T1.RptLiteralsToWhseBin,T1.RptLiteralsTransType,T1.RptLiteralsTranType,T1.RptLiteralsPage,T1.RptLiteralsTime,T1.RptLiteralsUser,T1.RptLiteralsDate,T1.RptLanguageID
+ FROM RptLabels_" + Parameters!TableGuid.Value + " T1"</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="RptLiteralsFrom">
+          <DataField>RptLiteralsFrom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AllocatedQty">
+          <DataField>AllocatedQty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsCalcCustName">
+          <DataField>RptLiteralsCalcCustName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblySeq">
+          <DataField>AssemblySeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPage">
+          <DataField>RptLiteralsPage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_AllocTicketPrinted">
+          <DataField>Calc_AllocTicketPrinted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssignedToEmpID">
+          <DataField>AssignedToEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BinNum">
+          <DataField>BinNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsCalcShipToName">
+          <DataField>RptLiteralsCalcShipToName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BitFlag">
+          <DataField>BitFlag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsFromBin">
+          <DataField>RptLiteralsFromBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsDate">
+          <DataField>RptLiteralsDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCAsySeq">
+          <DataField>Calc_BCAsySeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCFromBin">
+          <DataField>Calc_BCFromBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsFromWhse">
+          <DataField>RptLiteralsFromWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTime">
+          <DataField>RptLiteralsTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCFromWhse">
+          <DataField>Calc_BCFromWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCJobNum">
+          <DataField>Calc_BCJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_LotTracked">
+          <DataField>Calc_LotTracked</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsFromWhseBin">
+          <DataField>RptLiteralsFromWhseBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCMTLQueueSeq">
+          <DataField>Calc_BCMTLQueueSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsJobAsm">
+          <DataField>RptLiteralsJobAsm</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_PtDescription">
+          <DataField>Calc_PtDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCPartNum">
+          <DataField>Calc_BCPartNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsJobAsmSeq">
+          <DataField>RptLiteralsJobAsmSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCToBin">
+          <DataField>Calc_BCToBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsJobAsmSeqM">
+          <DataField>RptLiteralsJobAsmSeqM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsUser">
+          <DataField>RptLiteralsUser</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCToWhse">
+          <DataField>Calc_BCToWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_CustomerName">
+          <DataField>Calc_CustomerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsJobAsmTSeq">
+          <DataField>RptLiteralsJobAsmTSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsJobNum">
+          <DataField>RptLiteralsJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_FromBinDescription">
+          <DataField>Calc_FromBinDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsLine">
+          <DataField>RptLiteralsLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_FromWhseDescription">
+          <DataField>Calc_FromWhseDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_PrintBarCode">
+          <DataField>Calc_PrintBarCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsMtlType">
+          <DataField>RptLiteralsMtlType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsOrder">
+          <DataField>RptLiteralsOrder</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_RequestedByEmployeeName">
+          <DataField>Calc_RequestedByEmployeeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_SelectedByEmployeeName">
+          <DataField>Calc_SelectedByEmployeeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsOrderLine">
+          <DataField>RptLiteralsOrderLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsOrderLnRel">
+          <DataField>RptLiteralsOrderLnRel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ShipToName">
+          <DataField>Calc_ShipToName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsOrderRel">
+          <DataField>RptLiteralsOrderRel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_SrlTracked">
+          <DataField>Calc_SrlTracked</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPageBreak">
+          <DataField>RptLiteralsPageBreak</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ToBinDescription">
+          <DataField>Calc_ToBinDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ToWhseDescription">
+          <DataField>Calc_ToWhseDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPartDescription">
+          <DataField>RptLiteralsPartDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_VendorID">
+          <DataField>Calc_VendorID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPartNumber">
+          <DataField>RptLiteralsPartNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPlant">
+          <DataField>RptLiteralsPlant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_VendorName">
+          <DataField>Calc_VendorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsPOLnRel">
+          <DataField>RptLiteralsPOLnRel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsQty">
+          <DataField>RptLiteralsQty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsCost">
+          <DataField>DecimalsCost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsReqBy">
+          <DataField>RptLiteralsReqBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsGeneral">
+          <DataField>DecimalsGeneral</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsQueueID">
+          <DataField>RptLiteralsQueueID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsPrice">
+          <DataField>DecimalsPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DimCode">
+          <DataField>DimCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsSelectedByEmpID">
+          <DataField>RptLiteralsSelectedByEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsQueueRef">
+          <DataField>RptLiteralsQueueRef</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DistributionType">
+          <DataField>DistributionType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsReference">
+          <DataField>RptLiteralsReference</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FromBinNum">
+          <DataField>FromBinNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsSortBy">
+          <DataField>RptLiteralsSortBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FromWhse">
+          <DataField>FromWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsCost">
+          <DataField>GlbDecimalsCost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsRev">
+          <DataField>RptLiteralsRev</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsGeneral">
+          <DataField>GlbDecimalsGeneral</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTargetJobAsmSeq">
+          <DataField>RptLiteralsTargetJobAsmSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTitle01">
+          <DataField>RptLiteralsTitle01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsPrice">
+          <DataField>GlbDecimalsPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IUM">
+          <DataField>IUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTitle02">
+          <DataField>RptLiteralsTitle02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsToBin">
+          <DataField>RptLiteralsToBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobNum">
+          <DataField>JobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsToWhse">
+          <DataField>RptLiteralsToWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobSeq">
+          <DataField>JobSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobSeqType">
+          <DataField>JobSeqType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsToWhseBin">
+          <DataField>RptLiteralsToWhseBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTransType">
+          <DataField>RptLiteralsTransType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastMgrChangeEmpID">
+          <DataField>LastMgrChangeEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsTranType">
+          <DataField>RptLiteralsTranType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lock">
+          <DataField>Lock</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LotNum">
+          <DataField>LotNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueCheckBox01">
+          <DataField>MtlQueueCheckBox01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueCheckBox02">
+          <DataField>MtlQueueCheckBox02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueCheckBox03">
+          <DataField>MtlQueueCheckBox03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueCheckBox04">
+          <DataField>MtlQueueCheckBox04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueCheckBox05">
+          <DataField>MtlQueueCheckBox05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueDate01">
+          <DataField>MtlQueueDate01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueDate02">
+          <DataField>MtlQueueDate02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueDate03">
+          <DataField>MtlQueueDate03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueDate04">
+          <DataField>MtlQueueDate04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueDate05">
+          <DataField>MtlQueueDate05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueNumber01">
+          <DataField>MtlQueueNumber01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueNumber02">
+          <DataField>MtlQueueNumber02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueNumber03">
+          <DataField>MtlQueueNumber03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueNumber04">
+          <DataField>MtlQueueNumber04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueNumber05">
+          <DataField>MtlQueueNumber05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueSeq">
+          <DataField>MtlQueueSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlSeq">
+          <DataField>MtlSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NCTranID">
+          <DataField>NCTranID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NeedByDate">
+          <DataField>NeedByDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NeedByTime">
+          <DataField>NeedByTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NextAssemblySeq">
+          <DataField>NextAssemblySeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NextJobSeq">
+          <DataField>NextJobSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderLine">
+          <DataField>OrderLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderNum">
+          <DataField>OrderNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderRelNum">
+          <DataField>OrderRelNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackLine">
+          <DataField>PackLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackSlip">
+          <DataField>PackSlip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackStation">
+          <DataField>PackStation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialCheckBox01">
+          <DataField>PartAllocSerialCheckBox01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialCheckBox02">
+          <DataField>PartAllocSerialCheckBox02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialCheckBox03">
+          <DataField>PartAllocSerialCheckBox03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialCheckBox04">
+          <DataField>PartAllocSerialCheckBox04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialCheckBox05">
+          <DataField>PartAllocSerialCheckBox05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialDate01">
+          <DataField>PartAllocSerialDate01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialDate02">
+          <DataField>PartAllocSerialDate02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialDate03">
+          <DataField>PartAllocSerialDate03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialDate04">
+          <DataField>PartAllocSerialDate04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialDate05">
+          <DataField>PartAllocSerialDate05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialNumber01">
+          <DataField>PartAllocSerialNumber01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialNumber02">
+          <DataField>PartAllocSerialNumber02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialNumber03">
+          <DataField>PartAllocSerialNumber03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialNumber04">
+          <DataField>PartAllocSerialNumber04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartAllocSerialNumber05">
+          <DataField>PartAllocSerialNumber05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartDescription">
+          <DataField>PartDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartNum">
+          <DataField>PartNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsOriginalPrint">
+          <DataField>RptLiteralsOriginalPrint</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Plant">
+          <DataField>Plant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POLine">
+          <DataField>POLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PONum">
+          <DataField>PONum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PORelNum">
+          <DataField>PORelNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Priority">
+          <DataField>Priority</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PurPoint">
+          <DataField>PurPoint</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QueueID">
+          <DataField>QueueID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QueuePickSeq">
+          <DataField>QueuePickSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsReprint">
+          <DataField>RptLiteralsReprint</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Reference">
+          <DataField>Reference</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferencePrefix">
+          <DataField>ReferencePrefix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReleaseForPickingSeq">
+          <DataField>ReleaseForPickingSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RequestedByEmpID">
+          <DataField>RequestedByEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RevisionNum">
+          <DataField>RevisionNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RMADisp">
+          <DataField>RMADisp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RMALine">
+          <DataField>RMALine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RMANum">
+          <DataField>RMANum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RMAReceipt">
+          <DataField>RMAReceipt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLanguageID">
+          <DataField>RptLanguageID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RptLiteralsSerialNo">
+          <DataField>RptLiteralsSerialNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SelectedByEmpID">
+          <DataField>SelectedByEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SerialNum">
+          <DataField>SerialNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortChar01">
+          <DataField>ShortChar01</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortChar02">
+          <DataField>ShortChar02</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortChar03">
+          <DataField>ShortChar03</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortChar04">
+          <DataField>ShortChar04</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortChar05">
+          <DataField>ShortChar05</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SupplyJobNum">
+          <DataField>SupplyJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SysDate">
+          <DataField>SysDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SysRevID">
+          <DataField>SysRevID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SysRowID">
+          <DataField>SysRowID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SysTime">
+          <DataField>SysTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetAssemblySeq">
+          <DataField>TargetAssemblySeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetJobNum">
+          <DataField>TargetJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetMtlSeq">
+          <DataField>TargetMtlSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetTFOrdLine">
+          <DataField>TargetTFOrdLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetTFOrdNum">
+          <DataField>TargetTFOrdNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TFOrdLine">
+          <DataField>TFOrdLine</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TFOrdNum">
+          <DataField>TFOrdNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ToBinNum">
+          <DataField>ToBinNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ToWhse">
+          <DataField>ToWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranSource">
+          <DataField>TranSource</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranStatus">
+          <DataField>TranStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranType">
+          <DataField>TranType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorNum">
+          <DataField>VendorNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Visible">
+          <DataField>Visible</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WarehouseCode">
+          <DataField>WarehouseCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WaveNum">
+          <DataField>WaveNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="WhseGroupCode">
+          <DataField>WhseGroupCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="MtlQueue">
+      <Query>
+        <DataSourceName>dsMaterialQueue</DataSourceName>
+        <CommandText>="SELECT T1.AssemblySeq,T1.AssignedToEmpID,T1.Company,T1.DistributionType,T1.FromBinNum,T1.FromWhse,T1.IUM,T1.JobNum,T1.JobSeq,T1.JobSeqType,T1.LastMgrChangeEmpID,T1.Lock,T1.LotNum,T1.MtlQueueSeq,T1.NCTranID,T1.NeedByDate,T1.NeedByTime,T1.NextAssemblySeq,T1.NextJobSeq,T1.OrderLine,T1.OrderNum,T1.OrderRelNum,T1.PackLine,T1.PackSlip,T1.PackStation,T1.PartDescription,T1.PartNum,T1.Plant,T1.POLine,T1.PONum,T1.PORelNum,T1.Priority,T1.PurPoint,T1.Quantity,T1.QueueID,T1.QueuePickSeq,T1.Reference,T1.ReferencePrefix,T1.ReleaseForPickingSeq,T1.RequestedByEmpID,T1.RevisionNum,T1.RMADisp,T1.RMALine,T1.RMANum,T1.RMAReceipt,T1.SelectedByEmpID,T1.TargetAssemblySeq,T1.TargetJobNum,T1.TargetMtlSeq,T1.TargetTFOrdLine,T1.TargetTFOrdNum,T1.ToBinNum,T1.ToWhse,T1.TranSource,T1.TranStatus,T1.TranType,T1.VendorNum,T1.Visible,T1.WaveNum,T1.WhseGroupCode,T1.Calc_BCAsySeq,T1.Calc_BCFromBin,T1.Calc_BCFromWhse,T1.Calc_BCJobNum,T1.Calc_BCMTLQueueSeq,T1.Calc_BCPartNum,T1.Calc_BCToBin,T1.Calc_BCToWhse,T1.Calc_CustomerName,T1.Calc_FromBinDescription,T1.Calc_FromWhseDescription,T1.Calc_PrintBarCode,T1.Calc_AllocTicketPrinted,T1.Calc_PtDescription,T1.Calc_RequestedByEmployeeName,T1.Calc_SelectedByEmployeeName,T1.Calc_ShipToName,T1.Calc_ToBinDescription,T1.Calc_ToWhseDescription,T1.Calc_VendorID,T1.Calc_VendorName,T1.Calc_SrlTracked
+ FROM MtlQueue_" + Parameters!TableGuid.Value + " T1"</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="AssemblySeq">
+          <DataField>AssemblySeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AssignedToEmpID">
+          <DataField>AssignedToEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DistributionType">
+          <DataField>DistributionType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FromBinNum">
+          <DataField>FromBinNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FromWhse">
+          <DataField>FromWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IUM">
+          <DataField>IUM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobNum">
+          <DataField>JobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="JobSeq">
+          <DataField>JobSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="JobSeqType">
+          <DataField>JobSeqType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastMgrChangeEmpID">
+          <DataField>LastMgrChangeEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lock">
+          <DataField>Lock</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LotNum">
+          <DataField>LotNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueSeq">
+          <DataField>MtlQueueSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NCTranID">
+          <DataField>NCTranID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NeedByDate">
+          <DataField>NeedByDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="NeedByTime">
+          <DataField>NeedByTime</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NextAssemblySeq">
+          <DataField>NextAssemblySeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NextJobSeq">
+          <DataField>NextJobSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderLine">
+          <DataField>OrderLine</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderNum">
+          <DataField>OrderNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OrderRelNum">
+          <DataField>OrderRelNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PackLine">
+          <DataField>PackLine</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PackSlip">
+          <DataField>PackSlip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackStation">
+          <DataField>PackStation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartDescription">
+          <DataField>PartDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PartNum">
+          <DataField>PartNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Plant">
+          <DataField>Plant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POLine">
+          <DataField>POLine</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PONum">
+          <DataField>PONum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PORelNum">
+          <DataField>PORelNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Priority">
+          <DataField>Priority</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PurPoint">
+          <DataField>PurPoint</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="QueueID">
+          <DataField>QueueID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QueuePickSeq">
+          <DataField>QueuePickSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Reference">
+          <DataField>Reference</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReferencePrefix">
+          <DataField>ReferencePrefix</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReleaseForPickingSeq">
+          <DataField>ReleaseForPickingSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RequestedByEmpID">
+          <DataField>RequestedByEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RevisionNum">
+          <DataField>RevisionNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RMADisp">
+          <DataField>RMADisp</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RMALine">
+          <DataField>RMALine</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RMANum">
+          <DataField>RMANum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RMAReceipt">
+          <DataField>RMAReceipt</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SelectedByEmpID">
+          <DataField>SelectedByEmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetAssemblySeq">
+          <DataField>TargetAssemblySeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TargetJobNum">
+          <DataField>TargetJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TargetMtlSeq">
+          <DataField>TargetMtlSeq</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TargetTFOrdLine">
+          <DataField>TargetTFOrdLine</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TargetTFOrdNum">
+          <DataField>TargetTFOrdNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ToBinNum">
+          <DataField>ToBinNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ToWhse">
+          <DataField>ToWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranSource">
+          <DataField>TranSource</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranStatus">
+          <DataField>TranStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TranType">
+          <DataField>TranType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorNum">
+          <DataField>VendorNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Visible">
+          <DataField>Visible</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="WaveNum">
+          <DataField>WaveNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="WhseGroupCode">
+          <DataField>WhseGroupCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCAsySeq">
+          <DataField>Calc_BCAsySeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCFromBin">
+          <DataField>Calc_BCFromBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCFromWhse">
+          <DataField>Calc_BCFromWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCJobNum">
+          <DataField>Calc_BCJobNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCMTLQueueSeq">
+          <DataField>Calc_BCMTLQueueSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCPartNum">
+          <DataField>Calc_BCPartNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCToBin">
+          <DataField>Calc_BCToBin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_BCToWhse">
+          <DataField>Calc_BCToWhse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_CustomerName">
+          <DataField>Calc_CustomerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_FromBinDescription">
+          <DataField>Calc_FromBinDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_FromWhseDescription">
+          <DataField>Calc_FromWhseDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_PrintBarCode">
+          <DataField>Calc_PrintBarCode</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Calc_AllocTicketPrinted">
+          <DataField>Calc_AllocTicketPrinted</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Calc_RequestedByEmployeeName">
+          <DataField>Calc_RequestedByEmployeeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_PtDescription">
+          <DataField>Calc_PtDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_SelectedByEmployeeName">
+          <DataField>Calc_SelectedByEmployeeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ShipToName">
+          <DataField>Calc_ShipToName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ToBinDescription">
+          <DataField>Calc_ToBinDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_ToWhseDescription">
+          <DataField>Calc_ToWhseDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_VendorID">
+          <DataField>Calc_VendorID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_VendorName">
+          <DataField>Calc_VendorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Calc_SrlTracked">
+          <DataField>Calc_SrlTracked</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="FromWhseBin">
+          <Value>=IIf((IsNothing(Fields!FromBinNum.Value) or Fields!FromBinNum.Value like "") or 
+(IsNothing(Fields!Calc_FromBinDescription.Value) or Fields!Calc_FromBinDescription.Value like ""),
+Fields!FromWhse.Value &amp; " (" &amp; Fields!Calc_FromWhseDescription.Value &amp; ")",
+Fields!FromWhse.Value &amp; "/" &amp; Fields!FromBinNum.Value &amp; " (" &amp; Fields!Calc_FromWhseDescription.Value &amp; "/" &amp; Fields!Calc_FromBinDescription.Value &amp; ")" )</Value>
+        </Field>
+        <Field Name="ToWhseBin">
+          <Value>=Fields!ToWhse.Value &amp; " / " &amp; Fields!ToBinNum.Value &amp; " (" &amp; Fields!Calc_ToWhseDescription.Value &amp; " / " &amp; Fields!Calc_ToBinDescription.Value &amp; ")"</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="RptParameter">
+      <Query>
+        <DataSourceName>dsMaterialQueue</DataSourceName>
+        <CommandText>="SELECT T1.Company,T1.EmpID,T1.MtlQueueSeq,T1.OrderLineReleaseList,T1.PageBreak,T1.Plant,CAST( T1.ReleaseForPickingSeq as nvarchar ) as ReleaseForPickingSeq,T1.SortBy,T1.ReportCultureCode,T1.ReportCurrencyCode,T1.ThousandsSeparator,T1.DecimalSeparator,CAST( T1.DecimalsGeneral as nvarchar ) as DecimalsGeneral,CAST( T1.DecimalsCost as nvarchar ) as DecimalsCost,CAST( T1.DecimalsPrice as nvarchar ) as DecimalsPrice,CAST( T1.GlbDecimalsGeneral as nvarchar ) as GlbDecimalsGeneral,CAST( T1.GlbDecimalsCost as nvarchar ) as GlbDecimalsCost,CAST( T1.GlbDecimalsPrice as nvarchar ) as GlbDecimalsPrice,CAST( T1.DecimalsQuantity as nvarchar ) as DecimalsQuantity,T1.BarCodes
+ FROM RptParameter_" + Parameters!TableGuid.Value + " T1"</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EmpID">
+          <DataField>EmpID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MtlQueueSeq">
+          <DataField>MtlQueueSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderLineReleaseList">
+          <DataField>OrderLineReleaseList</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PageBreak">
+          <DataField>PageBreak</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Plant">
+          <DataField>Plant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReleaseForPickingSeq">
+          <DataField>ReleaseForPickingSeq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SortBy">
+          <DataField>SortBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportCultureCode">
+          <DataField>ReportCultureCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportCurrencyCode">
+          <DataField>ReportCurrencyCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ThousandsSeparator">
+          <DataField>ThousandsSeparator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalSeparator">
+          <DataField>DecimalSeparator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsGeneral">
+          <DataField>DecimalsGeneral</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsCost">
+          <DataField>DecimalsCost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsPrice">
+          <DataField>DecimalsPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsGeneral">
+          <DataField>GlbDecimalsGeneral</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsCost">
+          <DataField>GlbDecimalsCost</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GlbDecimalsPrice">
+          <DataField>GlbDecimalsPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DecimalsQuantity">
+          <DataField>DecimalsQuantity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BarCodes">
+          <DataField>BarCodes</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="TableGuid">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>TableGuid</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Pm_PageBreak">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>RptParameter</DataSetName>
+          <ValueField>PageBreak</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>PageBreak</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>RptParameter</DataSetName>
+          <ValueField>PageBreak</ValueField>
+          <LabelField>PageBreak</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="Pm_SortBy">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>RptParameter</DataSetName>
+          <ValueField>SortBy</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>SortBy</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>RptParameter</DataSetName>
+          <ValueField>SortBy</ValueField>
+          <LabelField>SortBy</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>=User!Language</Language>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>d19d64eb-3fa1-434b-a3cd-892918529c4a</rd:ReportID>
+</Report>

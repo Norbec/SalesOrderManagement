@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SalesOrderManagement", "SalesOrderManagement\SalesOrderManagement.rptproj", "{0B66279A-03A2-48DF-B565-55BE888B912B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Debug|Default.ActiveCfg = Debug
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Debug|Default.Build.0 = DebugLocal
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Debug|Default.Deploy.0 = DebugLocal
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.DebugLocal|Default.Build.0 = DebugLocal
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Release|Default.ActiveCfg = Release
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Release|Default.Build.0 = Release
+		{0B66279A-03A2-48DF-B565-55BE888B912B}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4420C9A-B0D2-4E23-A8AA-B7549D7BB839}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://norbecerp.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SalesOrderManagement\\SalesOrderManagement.rptproj
+		SccProjectName1 = SalesOrderManagement
+		SccLocalPath1 = SalesOrderManagement
+	EndGlobalSection
+EndGlobal
